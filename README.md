@@ -10,11 +10,13 @@
 - [常用系统管理命令](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/Linux/system-commands.md)
 
 ## 🛠️ 工具
+- [Docker 快速入门](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/工具/docker-quickstart.md)
 - [Git 速查手册](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/工具/git-cheatsheet.md)
+- [OpenCode AI 使用指南](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/工具/opencode-guide.md)
 - [Vim 编辑器速查手册](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/工具/vim-cheatsheet.md)
 
 ## 💻 开发
-*暂无内容*
+- [Streamlit 基础入门](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/开发/streamlit-basics.md)
 
 ---
 
