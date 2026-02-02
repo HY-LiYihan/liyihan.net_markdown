@@ -2,21 +2,30 @@
 
 本知识库汇集个人技术笔记与速查手册，访问完整版请至 [liyihan.net](https://liyihan.net)
 
+## 📦 版本管理
+
+**当前版本**: `v1.0` (2026-02-03)
+
+- 总文章数: 10 篇
+- [查看所有版本](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/versions/)
+
+---
+
 ## 🐧 Linux
-- [Linux 压缩解压速查手册](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/Linux/compression-cheatsheet.md)
-- [Linux 包管理器速查手册](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/Linux/package-managers.md)
-- [GNU Screen 速查手册](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/Linux/screen-cheatsheet.md)
-- [SSH 使用指南](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/Linux/ssh-guide.md)
-- [常用系统管理命令](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/Linux/system-commands.md)
+- [Linux 压缩解压速查手册](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/versions/v1.0/Linux/compression-cheatsheet.md)
+- [Linux 包管理器速查手册](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/versions/v1.0/Linux/package-managers.md)
+- [GNU Screen 速查手册](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/versions/v1.0/Linux/screen-cheatsheet.md)
+- [SSH 使用指南](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/versions/v1.0/Linux/ssh-guide.md)
+- [常用系统管理命令](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/versions/v1.0/Linux/system-commands.md)
 
 ## 🛠️ 工具
-- [Docker 快速入门](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/工具/docker-quickstart.md)
-- [Git 速查手册](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/工具/git-cheatsheet.md)
-- [OpenCode AI 使用指南](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/工具/opencode-guide.md)
-- [Vim 编辑器速查手册](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/工具/vim-cheatsheet.md)
+- [Docker 快速入门](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/versions/v1.0/工具/docker-quickstart.md)
+- [Git 速查手册](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/versions/v1.0/工具/git-cheatsheet.md)
+- [OpenCode AI 使用指南](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/versions/v1.0/工具/opencode-guide.md)
+- [Vim 编辑器速查手册](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/versions/v1.0/工具/vim-cheatsheet.md)
 
 ## 💻 开发
-- [Streamlit 基础入门](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/开发/streamlit-basics.md)
+- [Streamlit 基础入门](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/versions/v1.0/开发/streamlit-basics.md)
 
 ---
 
