@@ -6,8 +6,11 @@
 - [Linux 压缩解压速查手册](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/Linux/compression-cheatsheet.md)
 - [Linux 包管理器速查手册](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/Linux/package-managers.md)
 - [GNU Screen 速查手册](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/Linux/screen-cheatsheet.md)
+- [SSH 使用指南](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/Linux/ssh-guide.md)
+- [常用系统管理命令](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/Linux/system-commands.md)
 
 ## 🛠️ 工具
+- [Git 速查手册](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/工具/git-cheatsheet.md)
 - [Vim 编辑器速查手册](https://github.com/HY-LiYihan/liyihan.net_markdown/blob/main/工具/vim-cheatsheet.md)
 
 ## 💻 开发
