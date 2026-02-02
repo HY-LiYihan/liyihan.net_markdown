@@ -15,8 +15,6 @@ tags:
   - 速查手册
 ---
 
-# Linux 压缩解压速查手册
-
 ## 安装压缩工具
 
 ### Ubuntu/Debian

@@ -13,8 +13,6 @@ tags:
   - CLI
 ---
 
-# GNU Screen 速查手册
-
 ## 安装
 - Ubuntu/Debian: `sudo apt install screen`
 - CentOS/RHEL: `sudo yum install screen`

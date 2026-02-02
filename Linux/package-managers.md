@@ -15,8 +15,6 @@ tags:
   - 速查手册
 ---
 
-# Linux 包管理器速查手册
-
 ## apt/dpkg (Debian/Ubuntu)
 
 ### 常用命令
