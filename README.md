@@ -2,6 +2,26 @@
 
 本知识库汇集个人技术笔记与速查手册，访问完整版请至 [liyihan.net](https://liyihan.net)
 
+**作者说明**：文章作者显示为 `HYL` 表示该文章由 AI (OpenCode) 与我协作完成。
+
+---
+
+## 📚 项目简介
+
+这是一个基于版本管理的知识库系统，用于管理和部署 Markdown 格式的技术文章。
+
+**核心特性**：
+- ✅ 扁平化文章存储，便于查找和管理
+- ✅ 完整版本追踪（CSV + Markdown 双格式）
+- ✅ 增量式发布流程
+- ✅ 完全自定义分类（通过 Front Matter）
+- ✅ Git 友好（staging/ 和 deploy/ 已忽略）
+
+**重要说明**：
+- ⚠️ 仅支持增量式发布新文章
+- ⚠️ 无法修改已发布的文章
+- ⚠️ 如需修改文章，请在 HALO 上删除后重新发布
+
 ---
 
 ## 📚 快速开始
@@ -256,22 +276,20 @@ tags:                    # 可选：标签列表
 
 ## ❓ 常见问题
 
+### Q: 为什么只能增量发布新文章？
+
+**A**: 因为 HALO 的限制，无法直接更新已发布的文章。如果需要修改文章，必须在 HALO 上删除后重新发布。
+
 ### Q: 如何修改已发布的文章？
 
-1. 修改 `articles/` 中的文章
-2. 运行 `python scripts/prepare_deploy.py`
-3. 上传到 HALO（会覆盖同名文章）
-4. 运行 `python scripts/create_version.py`（更新版本信息）
-
-### Q: 如何重新发布文章到新版本？
-
-1. 将文章从 `articles/` 复制到 `staging/`
-2. 修改 Front Matter（如需要）
-3. 运行 `sync_to_articles.py --select`（选择要重新发布的文章）
-4. 运行 `create_version.py`
+**A**: 
+1. 在 HALO 上删除原文章
+2. 在 staging/ 中创建修改后的文章
+3. 按照正常流程发布
 
 ### Q: staging/ 和 articles/ 的区别？
 
+**A**:
 - **staging/**：新文章的暂存区，不参与版本追踪
 - **articles/**：所有已发布文章的最终位置，会被版本追踪
 
@@ -301,13 +319,6 @@ categories:
 ---
 ```
 
-### Q: 如何删除文章？
-
-1. 从 `articles/` 删除文章
-2. 运行 `python scripts/prepare_deploy.py`
-3. 在 HALO 上删除对应文章
-4. 运行 `python scripts/create_version.py`（更新版本信息）
-
 ---
 
 ## 📊 统计信息
@@ -321,6 +332,15 @@ categories:
 - `staging/` 和 `deploy/` 已添加到 `.gitignore`
 - 只提交 `articles/`、`scripts/`、版本文件
 - 避免重复上传和版本混乱
+
+---
+
+## ⚠️ 重要提醒
+
+1. **增量式发布**：本系统仅支持新增文章，不支持修改已发布的文章
+2. **文章修改**：如需修改文章，请在 HALO 上删除后重新发布
+3. **版本追踪**：每次发布都会记录版本信息，便于追溯
+4. **作者标识**：文章作者显示为 `HYL` 表示由 AI (OpenCode) 协作完成
 
 ---
 
