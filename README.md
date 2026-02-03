@@ -256,21 +256,208 @@ tags:                    # 可选：标签列表
 
 ---
 
-## 🎯 工作流程总结
+## 🎯 完整工作流程
+
+### 方式一：发布新文章到 HALO
+
+#### 1. 创建新文章
+
+在 `staging/` 目录中创建新文章：
 
 ```
-1. 在 staging/ 中创建新文章
-   ↓
-2. 运行 sync_to_articles.py（同步到 articles/）
-   ↓
-3. 运行 create_version.py（创建版本，更新版本信息）
-   ↓
-4. 运行 prepare_deploy.py（准备部署包）
-   ↓
-5. 上传 deploy/ 到 HALO
-   ↓
-6. 提交到 Git
+staging/
+├── your-new-article.md
+└── another-article.md
 ```
+
+**重要**：每个文章必须包含 Front Matter
+
+```yaml
+---
+title: 文章标题
+slug: article-slug
+description: 文章描述
+excerpt: 文章摘要
+categories:
+  - Linux
+  - 工具
+tags:
+  - tag1
+  - tag2
+---
+```
+
+#### 2. 同步到 articles/
+
+```bash
+# 发布所有文章
+python scripts/sync_to_articles.py
+
+# 交互式选择文章
+python scripts/sync_to_articles.py --select
+
+# 从配置文件读取
+python scripts/sync_to_articles.py --file staging/publish.txt
+```
+
+**交互式选择示例**：
+```
+Found 3 articles in staging/:
+
+[ ] 1. new-article.md - 新文章标题
+[ ] 2. another-article.md - 另一篇文章
+[ ] 3. third-article.md - 第三篇文章
+
+Select articles to publish (1-3, separate with spaces): 1 2
+
+Selected: new-article.md, another-article.md
+```
+
+**注意**：运行后 staging/ 中就没有这些文章了
+
+#### 3. 创建新版本
+
+```bash
+# 创建版本（自动递增版本号）
+python scripts/create_version.py
+
+# 指定版本号
+python scripts/create_version.py v2.0
+```
+
+**输出示例**：
+```
+[INFO] Creating version v1.1...
+[INFO] Reading articles from articles/...
+[INFO] Found 2 new articles
+[INFO] Updating versions.csv...
+[INFO] Updating versions.md...
+[OK] Version v1.1 created successfully
+[INFO] Total articles: 12
+[INFO] New articles: 2
+```
+
+**注意**：
+- 新版本会在 `versions.csv` 中添加 `is_deployed=False`
+- 每个新文章都标记为未部署状态
+
+#### 4. 准备部署
+
+**方式一：默认模式（推荐）**
+
+部署当前版本的所有未部署文章：
+
+```bash
+python scripts/prepare_deploy.py
+```
+
+**方式二：部署指定版本**
+
+```bash
+python scripts/prepare_deploy.py --version v1.1
+```
+
+**输出示例**：
+```
+[INFO] Preparing deployment for v1.1...
+[INFO] Reading version info from versions.csv...
+
+[INFO] Found 2 undeployed articles for version v1.1
+  [+] new-article.md
+  [+] another-article.md
+
+[INFO] Deployment package prepared at deploy/
+[INFO] Total files: 2
+[INFO] Upload all files from deploy/ to HALO
+
+============================================================
+Waiting for deployment confirmation...
+============================================================
+```
+
+**注意**：只部署 `is_deployed=False` 的文件
+
+#### 5. 处理旧的部署文件
+
+如果 `deploy/` 文件夹中已有文件，脚本会询问：
+
+```
+[WARNING] Found X files in deploy/
+Files:
+  - old-article-1.md
+  - old-article-2.md
+
+Options:
+  [1] Discard these files (delete)
+  [2] Move them back to staging
+
+Your choice (1/2):
+```
+
+**选项 1**：直接删除旧文件
+- deploy 文件夹会被清空
+- 旧文件永久删除
+
+**选项 2**：移回 staging
+- 文件会移回 staging/ 对应的分类目录
+- deploy 文件夹会被清空
+- 可以重新部署这些文件
+
+#### 6. 确认部署
+
+上传完成后，脚本会等待确认：
+
+```
+============================================================
+Waiting for deployment confirmation...
+============================================================
+Deployment completed? (y/n):
+```
+
+**输入 `y`**：
+- deploy 文件夹自动清空
+- versions.csv 中的 `is_deployed` 更新为 `True`
+
+**输入 `n`**：
+- deploy 文件夹保持不变
+- versions.csv 不更新
+- 可以重新上传
+
+#### 7. 上传到 HALO
+
+打开 `deploy/` 文件夹，上传所有文件到 HALO。
+
+#### 8. 提交到 Git
+
+```bash
+git add .
+git commit -m "version: v1.1 - add 2 new articles"
+```
+
+---
+
+### 方式二：重新发布文章
+
+**场景**：修改已发布的文章
+
+#### 1. 在 HALO 上删除原文章
+- 登录 HALO 后台
+- 找到要修改的文章
+- 删除文章
+
+#### 2. 在 staging/ 中创建修改后的文章
+
+```
+staging/
+└── modified-article.md
+```
+
+#### 3. 按照正常流程发布
+- 运行 `python scripts/sync_to_articles.py`
+- 运行 `python scripts/create_version.py`
+- 运行 `python scripts/prepare_deploy.py`
+- 上传到 HALO
+- 提交到 git
 
 ---
 
