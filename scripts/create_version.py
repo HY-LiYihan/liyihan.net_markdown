@@ -80,7 +80,7 @@ def read_versions_csv():
 
 def write_versions_csv(records):
     """写入 versions.csv"""
-    fieldnames = ['article_path', 'version', 'published_at', 'title', 'description', 'excerpt', 'category', 'tags', 'slug']
+    fieldnames = ['article_path', 'version', 'published_at', 'is_deployed', 'title', 'description', 'excerpt', 'category', 'tags', 'slug']
 
     with open(VERSIONS_CSV, 'w', encoding='utf-8', newline='') as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
@@ -165,6 +165,7 @@ def create_version(version=None):
             'article_path': article['filename'],
             'version': new_version,
             'published_at': published_at.strftime('%Y-%m-%d'),
+            'is_deployed': 'False',
             'title': article['title'],
             'description': article['description'],
             'excerpt': article['excerpt'],

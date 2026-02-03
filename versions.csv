@@ -1,1 +1,11 @@
-article_path,version,published_at,title,description,excerpt,category,tags,slug
+article_path,version,published_at,is_deployed,title,description,excerpt,category,tags,slug
+compression-cheatsheet.md,v1.0,2026-02-03,False,Linux 压缩解压速查手册,Linux 下各种压缩格式（tar、gzip、zip、7z 等）的压缩解压命令及工具安装指南,全面介绍 Linux 下常见压缩格式的使用方法,Linux|系统管理,compression|tar|gzip|zip|7z|速查手册,linux-compression-cheatsheet
+docker-quickstart.md,v1.0,2026-02-03,False,Docker 快速入门,Docker 容器技术的快速入门指南，包含基本概念、常用命令和 Dockerfile 示例,快速掌握 Docker 容器化技术,工具|容器化,docker|container|devops|速查手册,docker-quickstart
+git-cheatsheet.md,v1.0,2026-02-03,False,Git 速查手册,Git 版本控制系统的快速参考指南，包含基本命令、分支管理和常用工作流,掌握 Git 版本控制的核心命令,工具|版本控制,git|version-control|速查手册,git-cheatsheet
+opencode-guide.md,v1.0,2026-02-03,False,OpenCode AI 使用指南,OpenCode AI 编程助手的完整使用指南，包含基本概念、常用命令和最佳实践,掌握 OpenCode AI 辅助编程的核心技巧,工具|AI 编程,opencode|ai|编程助手|速查手册,opencode-guide
+package-managers.md,v1.0,2026-02-03,False,Linux 包管理器速查手册,Linux 下各发行版包管理器（apt、yum、dnf、pacman）的使用指南和命令速查,掌握 Linux 包管理器的使用方法,Linux|系统管理,apt|yum|dnf|pacman|package|速查手册,linux-package-managers
+screen-cheatsheet.md,v1.0,2026-02-03,False,GNU Screen 速查手册,Linux 下 GNU Screen 终端复用器的快速参考指南，包含基本用法和常用命令,Screen 是一款强大的终端复用工具，本文提供快速参考指南,Linux|终端工具,screen|终端|速查手册|CLI,gnu-screen-cheatsheet
+ssh-guide.md,v1.0,2026-02-03,False,SSH 使用指南,SSH 远程登录和管理的完整指南，包含配置、密钥管理、端口转发和常见问题解决,掌握 SSH 远程连接和安全配置,Linux|网络,ssh|远程连接|安全|速查手册,ssh-guide
+streamlit-basics.md,v1.0,2026-02-03,False,Streamlit 基础入门,Streamlit 数据应用框架的入门指南，包含安装、基本组件和简单应用示例,快速上手 Streamlit 构建数据应用,开发|Python|数据科学,streamlit|python|数据应用|快速入门,streamlit-basics
+system-commands.md,v1.0,2026-02-03,False,常用系统管理命令,Linux 系统管理常用命令速查，包含进程管理、磁盘管理、网络命令等,掌握 Linux 系统管理的核心命令,Linux|系统管理,system|process|network|速查手册,linux-system-commands
+vim-cheatsheet.md,v1.0,2026-02-03,False,Vim 编辑器速查手册,Vim 编辑器的快速参考指南，包含基本操作、命令模式和可视模式,Vim 强大的文本编辑器快速上手,工具|编辑器,vim|editor|文本编辑|速查手册,vim-cheatsheet
